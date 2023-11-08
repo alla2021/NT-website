@@ -1,0 +1,72 @@
+.intro {
+  background-image: url(../image/header-bg.png);
+  min-height: 100vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: flex;
+  align-items:center;
+  position: relative;
+  color: $white;
+
+
+  &__wrapper {
+    margin: 0 auto;
+    text-align: center;
+    max-width: 650px;
+    width: 100%;
+    font-family: $reg-oswald;
+  }
+
+  &__title {
+    font-size: 55px;
+    line-height: 77px;
+    letter-spacing: 15px;
+    font-family: $reg-oswald;
+    margin-bottom: 35px;
+
+      @include tab-mid {
+        font-size: 40px;
+        line-height: 50px;
+        letter-spacing: 10px;
+      }
+
+      @include mob-large {
+        font-size: 35px;
+        line-height: 45px;
+        letter-spacing: 8px;
+        margin-bottom: 15px;
+      }
+
+      @include mob-mid {
+        font-size: 30px;
+        line-height: 40px;
+        letter-spacing: 5px;
+      }
+  }
+
+  &__subtitle {
+    font-size: 24px;
+    margin-bottom: 60px;
+    font-family: $light-oswald;
+    letter-spacing: 3px;
+
+    @include tab-mid {
+      margin-bottom: 20px;
+    }
+    
+    @include mob-large {
+      font-size: 20px;
+    }
+  }
+
+  &__descriprion {
+    font-family: $light-oswald;
+    font-size: 18px;
+  }
+
+
+}
+
+
+

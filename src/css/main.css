@@ -1,0 +1,294 @@
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  display: block;
+  text-decoration: none;
+  cursor: pointer;
+  color: inherit;
+}
+
+h1,
+h2 {
+  text-transform: uppercase;
+}
+
+button {
+  border: none;
+  margin: 0;
+  padding: 0;
+  cursor: pointer;
+}
+
+input,
+button,
+textarea,
+select {
+  font-family: inherit;
+  border: none;
+}
+
+input {
+  all: unset;
+}
+
+@font-face {
+  font-family: "icomoon";
+  src: url("../fonts/icomoon.eot?tjymrk");
+  src: url("../fonts/icomoon.eot?tjymrk#iefix") format("embedded-opentype"), url("../fonts/icomoon.ttf?tjymrk") format("truetype"), url("../fonts/icomoon.woff?tjymrk") format("woff"), url("../fonts/icomoon.svg?tjymrk#icomoon") format("svg");
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+[class^=icon-], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: "icomoon" !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-quotes-left:before {
+  content: "\e977";
+}
+
+.icon-quotes-right:before {
+  content: "\e978";
+}
+
+.icon-search:before {
+  content: "\e986";
+}
+
+.icon-arrow-right2:before {
+  content: "\ea3c";
+}
+
+.icon-arrow-left2:before {
+  content: "\ea40";
+}
+
+.icon-mail:before {
+  content: "\ea86";
+}
+
+.icon-facebook:before {
+  content: "\ea90";
+}
+
+.icon-instagram:before {
+  content: "\ea92";
+}
+
+.icon-telegram:before {
+  content: "\ea95";
+}
+
+.icon-twitter:before {
+  content: "\ea96";
+}
+
+.icon-github:before {
+  content: "\eab0";
+}
+
+.icon-linkedin:before {
+  content: "\eaca";
+}
+
+@font-face {
+  font-family: "Oswald regular";
+  src: url("../fonts/Oswald-Regular.eot");
+  src: url("../fonts/Oswald-Regular.eot?#iefix") format("embedded-opentype"), url("../fonts/Oswald-Regular.woff2") format("woff2"), url("../fonts/Oswald-Regular.woff") format("woff"), url("../fonts/Oswald-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Oswald light";
+  src: url("../fonts/Oswald-Light.eot");
+  src: url("../fonts/Oswald-Light.eot?#iefix") format("embedded-opentype"), url("../fonts/Oswald-Light.woff2") format("woff2"), url("../fonts/Oswald-Light.woff") format("woff"), url("../fonts/Oswald-Light.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+.header {
+  max-height: calc(100vh - 80px);
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  width: 100%;
+  color: #f7f8f3;
+  font-family: "Oswald regular";
+  padding: 10px 0;
+}
+@media screen and (max-width: 767px) {
+  .header {
+    min-height: 60px;
+  }
+}
+.header__wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header__logo {
+  font-size: 36px;
+  font-weight: bold;
+  font-family: "Oswald regular";
+}
+.header__nav-btns {
+  display: flex;
+  align-items: center;
+}
+.header__search {
+  padding: 0 32px;
+  display: flex;
+  align-items: center;
+}
+.header__menu-btn {
+  background-color: #00C9E0;
+  border-radius: 20px;
+  color: #f7f8f3;
+  padding: 15px 45px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+
+.footer {
+  min-height: 600px;
+  background-color: #02223B;
+  font-family: "Oswald light";
+  color: #f7f8f3;
+  display: flex;
+  text-align: center;
+  align-items: center;
+}
+.footer__row {
+  display: flex;
+  justify-content: space-around;
+  padding-bottom: 30px;
+}
+.footer__title {
+  padding-bottom: 20px;
+  font-size: 18px;
+  text-transform: uppercase;
+}
+.footer__list_icons {
+  display: flex;
+  justify-content: space-between;
+}
+.footer__item {
+  padding: 10px 0;
+}
+.footer__copyright {
+  padding: 30px 0;
+}
+
+.intro {
+  background-image: url(../image/header-bg.png);
+  min-height: 100vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  position: relative;
+  color: #f7f8f3;
+}
+.intro__wrapper {
+  margin: 0 auto;
+  text-align: center;
+  max-width: 650px;
+  width: 100%;
+  font-family: "Oswald regular";
+}
+.intro__title {
+  font-size: 55px;
+  line-height: 77px;
+  letter-spacing: 15px;
+  font-family: "Oswald regular";
+  margin-bottom: 35px;
+}
+@media screen and (max-width: 767px) {
+  .intro__title {
+    font-size: 40px;
+    line-height: 50px;
+    letter-spacing: 10px;
+  }
+}
+@media screen and (max-width: 640px) {
+  .intro__title {
+    font-size: 35px;
+    line-height: 45px;
+    letter-spacing: 8px;
+    margin-bottom: 15px;
+  }
+}
+@media screen and (max-width: 425px) {
+  .intro__title {
+    font-size: 30px;
+    line-height: 40px;
+    letter-spacing: 5px;
+  }
+}
+.intro__subtitle {
+  font-size: 24px;
+  margin-bottom: 60px;
+  font-family: "Oswald light";
+  letter-spacing: 3px;
+}
+@media screen and (max-width: 767px) {
+  .intro__subtitle {
+    margin-bottom: 20px;
+  }
+}
+@media screen and (max-width: 640px) {
+  .intro__subtitle {
+    font-size: 20px;
+  }
+}
+.intro__descriprion {
+  font-family: "Oswald light";
+  font-size: 18px;
+}
+
+.container {
+  max-width: 1200px;
+  width: 100%;
+  padding: 0 15px;
+  margin: 0 auto;
+}

@@ -1,0 +1,41 @@
+{
+  "name": "git-exam",
+  "version": "1.0.0",
+  "description": "Gulp project for learning",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alla2021/CBD.git"
+  },
+  "author": "Alla",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/alla2021/CBD/issues"
+  },
+  "homepage": "https://github.com/alla2021/CBD#readme",
+  "devDependencies": {
+    "browser-sync": "^2.27.5",
+    "del": "^6.0.0",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^8.0.0",
+    "gulp-clean-css": "^4.3.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-notify": "^4.0.0",
+    "gulp-plumber": "^1.2.1",
+    "gulp-sass": "^5.0.0",
+    "gulp-sass-lint": "^1.4.0",
+    "gulp-uglify": "^3.0.2",
+    "gulp-zip": "^5.1.0",
+    "sass": "^1.43.3"
+  },
+  "browserslist": [
+    "defaults"
+  ],
+  "dependencies": {
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
+  }
+}

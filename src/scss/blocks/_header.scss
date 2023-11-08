@@ -1,0 +1,56 @@
+.header {
+  max-height: calc(100vh - 80px);
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  width: 100%;
+  color: $white;
+  font-family: $reg-oswald;
+  padding: 10px 0;
+
+    @include tab-mid {
+      min-height: 60px;
+    }
+
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__logo{
+    font-size: 36px;
+    font-weight: bold;
+    font-family: $reg-oswald;
+  }
+  
+  &__nav-btns{
+    display: flex;
+    align-items: center;
+  }
+
+  &__search{
+    padding: 0 32px;
+    display: flex;
+    align-items: center;
+  }
+
+
+  
+
+  &__menu-btn {
+    background-color:$blue-btn; 
+    border-radius: 20px;
+    color: $white;
+    padding: 15px 45px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+  }
+
+
+}
+  
+
