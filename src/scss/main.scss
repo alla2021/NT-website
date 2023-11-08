@@ -6,11 +6,29 @@
 @import 'blocks/header';
 @import 'blocks/footer';
 @import 'pages/intro';
+@import 'pages/about';
+
 
 .container {
-  max-width: 1200px;
+  max-width: 1600px;
   width: 100%;
   padding: 0 15px;
   margin: 0 auto;
 }
 
+.btn {
+  background-color:$blue-btn; 
+  border-radius: 50px;
+  color: $white;
+  padding: 15px 45px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  font-family: $light-lato;
+}
+
+.btn:hover {
+  background-color: $white;
+  color: #02223B;
+}

@@ -1,21 +1,28 @@
-//burger
-const btnMenu = document.querySelector('.js-burger-btn');
-const menu = document.querySelector('.js-header');
+//таб
+let tabLinks = document.querySelectorAll(".tablinks");
+let tabContents = document.querySelectorAll(".tabcontent");
 
-btnMenu.addEventListener('click', function() {
-  menu.classList.toggle('active');
+tabLinks.forEach(function(link, index) {
+   link.addEventListener("click", function() {
+      tabLinks.forEach(function(item) {
+         item.classList.remove("active");
+      });
+      tabContents.forEach(function(content) {
+         content.style.display = "none";
+      });
+      link.classList.add("active");
+      tabContents[index].style.display = "block";
+   });
 });
 
-const headerLinks = document.querySelectorAll('.js-header a');
-headerLinks.forEach(function(link) {
-  link.addEventListener('click', function() {
-    menu.classList.remove('active');
-  });
-});
+tabLinks[0].click();
 
-document.addEventListener('mouseup', function(e) {
-  if (!menu.contains(e.target)) {
-    menu.classList.remove('active');
-  }
-});
-
+//slider
+$(document).ready(function(){
+   $('.slider').slick({
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      prevArrow:$(".arrow-l"),
+      nextArrow:$(".arrow-r"),
+   });
+ });

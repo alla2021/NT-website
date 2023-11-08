@@ -142,6 +142,22 @@ input {
   font-style: normal;
   font-display: swap;
 }
+@font-face {
+  font-family: "Lato";
+  src: url("../fonts/Lato-Light.eot");
+  src: url("../fonts/Lato-Light.eot?#iefix") format("embedded-opentype"), url("../fonts/Lato-Light.woff2") format("woff2"), url("../fonts/Lato-Light.woff") format("woff"), url("../fonts/Lato-Light.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Lato regular";
+  src: url("../fonts/Lato-Regular.eot");
+  src: url("../fonts/Lato-Regular.eot?#iefix") format("embedded-opentype"), url("../fonts/Lato-Regular.woff2") format("woff2"), url("../fonts/Lato-Regular.woff") format("woff"), url("../fonts/Lato-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
 .header {
   max-height: calc(100vh - 80px);
   position: absolute;
@@ -176,16 +192,6 @@ input {
   padding: 0 32px;
   display: flex;
   align-items: center;
-}
-.header__menu-btn {
-  background-color: #00C9E0;
-  border-radius: 20px;
-  color: #f7f8f3;
-  padding: 15px 45px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
 }
 
 .footer {
@@ -282,13 +288,148 @@ input {
   }
 }
 .intro__descriprion {
-  font-family: "Oswald light";
+  font-family: "Lato regular";
   font-size: 18px;
 }
 
-.container {
+.about {
+  background-image: url(../image/bg-1.png);
+  background-color: #02223B;
+  min-height: 100vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  padding: 30px 0;
+}
+.about__block {
   max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  color: white;
+  padding: 30px 10px;
+}
+.about__wrapper {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 30px;
+}
+.about__title {
+  font-size: 40px;
+  font-family: "Oswald regular";
+}
+.about__icon-cross {
+  width: 16px;
+  height: 16px;
+  background-color: #f7f8f3;
+  clip-path: polygon(20% 0%, 0% 20%, 30% 50%, 0% 80%, 20% 100%, 50% 70%, 80% 100%, 100% 80%, 70% 50%, 100% 20%, 80% 0%, 50% 30%);
+}
+.about__description {
+  width: 350px;
+  font-size: 18px;
+  font-family: "Lato regular";
+}
+.about__list {
+  max-width: 1200px;
+  padding-top: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-transform: uppercase;
+  font-size: 20px;
+  font-family: "Oswald regular";
+  border-bottom: 1px solid #00C9E0;
+}
+.about__item {
+  padding: 20px 0;
+}
+.about__item:hover {
+  cursor: pointer;
+  color: #00C9E0;
+}
+.about__item.active {
+  border-bottom: 3px solid #00C9E0;
+  display: block;
+}
+.about__item-content {
+  display: none;
+}
+.about__tab-row {
+  display: flex;
+  align-items: center;
+  min-height: 620px;
+  gap: 60px;
+}
+.about__tab-col {
+  width: 50%;
+}
+.about__tab-col_slider {
+  position: relative;
+  max-width: 386px;
+}
+.about__content-title {
+  font-size: 28px;
+  text-transform: uppercase;
+  font-family: "Lato regular";
+  margin: 40px 0;
+}
+.about__content-text {
+  padding: 20px 0;
+  font-size: 18px;
+  font-family: "Lato";
+}
+.about__btn {
+  margin: 40px 0;
+}
+
+.slider img {
+  max-width: 386px;
+}
+
+.arrows {
+  position: absolute;
+  bottom: 8px;
+  right: 0;
+  z-index: 4;
+}
+
+.arrow-l {
+  margin: 0;
+  padding: 10px;
+  border: 1px solid #004274;
+  background-color: #02223B;
+  border-radius: 5px 0 0 0;
+}
+
+.arrow-r {
+  margin: 0;
+  padding: 10px;
+  border: 1px solid #004274;
+  border-radius: 0 0 5px 0;
+  background-color: #02223B;
+}
+
+.container {
+  max-width: 1600px;
   width: 100%;
   padding: 0 15px;
   margin: 0 auto;
+}
+
+.btn {
+  background-color: #00C9E0;
+  border-radius: 50px;
+  color: #f7f8f3;
+  padding: 15px 45px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  font-family: "Lato";
+}
+
+.btn:hover {
+  background-color: #f7f8f3;
+  color: #02223B;
 }

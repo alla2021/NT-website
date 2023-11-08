@@ -6,6 +6,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="shortcut icon" href="./image/favicon.ico" />
   <title>NT.</title>
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css">
   <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
@@ -19,7 +21,7 @@
             <div class="header__search">
               <span class="icon-search"></span>
             </div>
-            <button class="header__menu-btn">MENU</button>
+            <button class="btn">MENU</button>
         </div>
       </div>
     </div>
@@ -35,11 +37,60 @@
         </div>
       </div> 
     </section>
-    <section class="trip">
-      <h2 class="trip__title">Pick your trip</h2>
-      <div class="tripp__icon-cross"></div>
-      <p class="trip__description">Our team put together some trips to you to discover,
-        feel free to discover each of them.</p>
+    <section class="about">
+      <div class="about__block">
+        <div class="about__wrapper">
+          <h2 class="about__title">Pick your trip</h2>
+          <div class="about__icon-cross"></div>
+          <p class="about__description">Our team put together some abouts to you to discover,
+            feel free to discover each of them.</p>
+        </div>
+        <div class="about__tab-block">
+          <ul class="about__list" id="list">
+              <li class="about__item tablinks active">Chill Adventure</li>
+              <li class="about__item tablinks disable">Spooky Times</li>
+              <li class="about__item tablinks disable">Desert Madness</li>
+              <li class="about__item tablinks disable">Out in the wild</li>
+          </ul>
+      </div>
+  
+      <div id="tab1" class="about__item-content tabcontent">
+          <div class="about__tab-row">
+            <div class="about__tab-col about__tab-col_slider">
+              <div class="slider">
+                <div><img src="./image/Image.png" alt="Image 1"></div>
+                <div><img src="./image/Image.png" alt="Image 2"></div>
+              </div>
+              <div class="arrows">
+                <span class="icon-arrow-left2 arrow-l"></span>
+                <span class="icon-arrow-right2 arrow-r"></span>
+              </div>
+            </div>
+            <div class="about__tab-col">
+              <h4 class="about__content-title">Chill Adventure</h4>
+              <p class="about__content-text">Ornare vivamus molestie pellentesque nunc. Sed sapien erat ultrices curabitur. Erat id fringilla arcu condimentum fames.</p>
+              <p class="about__content-text">Aliquet dictum aliquet faucibus cursus turpis. Suspendisse cum rutrum sit ut sociis. Pellentesque neque orci adipiscing pharetra lacus, dignissim pharetra ipsum blandit. Feugiat quis quam consectetur lectus id quis tortor vel, mattis.</p>
+              <button class="about__btn btn">SEE OUR LATEST OFFER</button>
+            </div>
+          </div>
+      </div>
+  
+      <div id="tab2" class="about__item-content tabcontent">
+          <h3>Title 2</h3>
+          <p>Description</p>
+      </div>
+  
+      <div id="tab3" class="about__item-content tabcontent">
+          <h3>Title 3</h3>
+          <p>Description</p>
+      </div>
+
+      <div id="tab4" class="about__item-content tabcontent">
+          <h3>Title 4</h3>
+          <p>Description</p>
+    </div>
+ 
+
     </section>  
   </main>
 
@@ -95,7 +146,9 @@
       </div>
     </section>
   </footer>
-  <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+
   <script src="js/script.js"></script>
 </body>
 </html>

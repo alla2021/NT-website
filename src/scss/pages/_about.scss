@@ -1,0 +1,136 @@
+.about {
+   //background-image: url(../image/bg.png);
+   background-image: url(../image/bg-1.png);
+   background-color: #02223B;
+   min-height: 100vh;
+   background-size: cover;
+   background-repeat: no-repeat;
+   background-position: center;
+   padding: 30px 0;
+
+   &__block{
+      max-width: 1200px;
+      width: 100%;
+      margin: 0 auto;
+      color: white;
+      padding: 30px 10px;
+   }
+   
+   &__wrapper {
+      display: flex;
+      gap: 20px;
+      justify-content: center;
+      align-items: center;
+      padding-bottom: 30px;
+   }
+
+   &__title {
+      font-size: 40px;
+      font-family: $reg-oswald;
+   }
+
+   &__icon-cross {
+      width: 16px;
+      height: 16px;
+      background-color: $white;
+      clip-path: polygon(20% 0%, 0% 20%, 30% 50%, 0% 80%, 20% 100%, 50% 70%, 80% 100%, 100% 80%, 70% 50%, 100% 20%, 80% 0%, 50% 30%);
+   }
+
+   &__description{
+      width: 350px;
+      font-size: 18px;
+      font-family: $reg-lato;
+   }
+
+   &__list {
+      max-width: 1200px;
+      padding-top: 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      text-transform: uppercase;
+      font-size: 20px;
+      font-family: $reg-oswald;
+      border-bottom: 1px solid $blue-btn;
+   }
+
+   &__item {
+      padding: 20px 0;
+   
+      &:hover {
+         cursor: pointer;
+         color: $blue-btn;
+      }
+   
+      &.active {
+         border-bottom: 3px solid $blue-btn;
+         display: block;
+      }
+   }
+
+   &__item-content{
+      display: none;
+   }
+
+   &__tab-row{
+      display: flex;
+      align-items: center;
+      min-height: 620px;
+      gap: 60px;
+   }
+
+   &__tab-col {
+      width: 50%;
+
+         &_slider{
+            position: relative;
+            max-width: 386px;
+         }
+   }
+   
+   &__content-title{
+      font-size: 28px;
+      text-transform: uppercase;
+      font-family: $reg-lato;
+      margin: 40px 0;
+   }
+
+   &__content-text {
+      padding: 20px 0;
+      font-size: 18px;
+      font-family: $light-lato;
+   }
+
+   &__btn {
+      margin: 40px 0;
+   }
+}
+.slider{
+   img {
+      max-width: 386px;
+   }
+}
+
+
+.arrows {
+   position: absolute;
+   bottom: 8px;
+   right: 0;
+   z-index: 4;
+}
+
+.arrow-l {
+   margin: 0;
+   padding: 10px;
+   border: 1px solid #004274;
+   background-color: #02223B;
+   border-radius: 5px 0 0 0;
+}
+
+.arrow-r {
+   margin: 0;
+   padding: 10px;
+   border: 1px solid #004274;
+   border-radius: 0 0 5px 0;
+   background-color: #02223B;
+}
