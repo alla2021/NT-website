@@ -11,16 +11,48 @@
     display: flex;
     justify-content: space-around;
     padding-bottom: 30px;
+    flex-wrap: wrap;
   }
 
   &__title {
     padding-bottom: 20px;
     font-size: 18px;
     text-transform: uppercase;
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 1px;
+      background-color: $blue-btn; 
+    }
+    
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: -4px; 
+      left: calc(100% - 8px); 
+      width: 8px; 
+      height: 8px; 
+      background-color: $blue-btn; 
+      transform: rotate(45deg); 
+    }
+  }
+
+  &__list {
+    padding-top: 20px;
   }
 
   &__item{
     padding: 10px 0;
+
+    &:hover{
+      color: $blue-btn;
+      scale: 1.1;
+    }
   }
 
   &__copyright{

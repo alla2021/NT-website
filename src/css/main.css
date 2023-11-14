@@ -236,14 +236,42 @@ input {
   display: flex;
   justify-content: space-around;
   padding-bottom: 30px;
+  flex-wrap: wrap;
 }
 .footer__title {
   padding-bottom: 20px;
   font-size: 18px;
   text-transform: uppercase;
+  position: relative;
+}
+.footer__title::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background-color: #00C9E0;
+}
+.footer__title::after {
+  content: "";
+  position: absolute;
+  bottom: -4px;
+  left: calc(100% - 8px);
+  width: 8px;
+  height: 8px;
+  background-color: #00C9E0;
+  transform: rotate(45deg);
+}
+.footer__list {
+  padding-top: 20px;
 }
 .footer__item {
   padding: 10px 0;
+}
+.footer__item:hover {
+  color: #00C9E0;
+  scale: 1.1;
 }
 .footer__copyright {
   padding: 30px 0;
@@ -565,6 +593,88 @@ input {
   border: 1px solid #004274;
   border-radius: 0 0 5px 0;
   background-color: #02223B;
+}
+
+.about-us {
+  background-image: url(../image/bg.png);
+  background-color: #02223B;
+  background-repeat: no-repeat;
+  background-position: center;
+  padding: 30px 0;
+  color: #f7f8f3;
+}
+.about-us__row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  min-height: 620px;
+  gap: 60px;
+}
+@media screen and (max-width: 640px) {
+  .about-us__row {
+    flex-direction: column;
+  }
+}
+.about-us__col {
+  width: 50%;
+}
+.about-us__col_first {
+  max-width: 320px;
+}
+.about-us__col_second {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+}
+.about-us__col img {
+  max-width: 395px;
+  width: 100%;
+}
+.about-us__col__div1 {
+  grid-area: 1/1/2/2;
+}
+.about-us__col__div2 {
+  grid-area: 2/1/3/2;
+}
+.about-us__col__div3 {
+  grid-area: 1/2/2/3;
+}
+.about-us__col__div4 {
+  grid-area: 2/2/3/3;
+}
+.about-us__title {
+  font-size: 40px;
+  font-family: "Oswald regular";
+}
+.about-us__description {
+  width: 350px;
+  font-size: 18px;
+  font-family: "Lato regular";
+}
+.about-us__text {
+  padding: 20px 0;
+  font-size: 18px;
+  font-family: "Lato";
+}
+.about-us__btn {
+  margin: 40px 0;
+  position: relative;
+}
+.about-us__btn::after {
+  content: "";
+  position: absolute;
+  right: -20%;
+  bottom: 50%;
+  height: 2px;
+  width: 80px;
+  z-index: 10;
+  background-color: #ffffff;
+}
+.about-us__btn:hover::after {
+  background-color: #00C9E0;
 }
 
 .container {

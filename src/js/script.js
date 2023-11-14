@@ -31,7 +31,7 @@ export default menuModule;
 
  //scroll
 document.querySelector('.intro__btn-scroll').addEventListener('click', function() {
-   scrollToElement('here');
+   scrollToElement('about');
 });
 
 function scrollToElement(elementId) {
@@ -51,15 +51,14 @@ searchInput.placeholder = 'Search...';
 searchInput.classList.add('search-input');
 
 function toggleSearchInput() {
-  if (!headerSearch.contains(searchInput)) {
-    headerSearch.appendChild(searchInput);
-    searchInput.focus();
-  } else {
-    headerSearch.removeChild(searchInput);
-  }
+   if (!headerSearch.contains(searchInput)) {
+      headerSearch.appendChild(searchInput);
+      searchInput.focus();
+   } else {
+      headerSearch.removeChild(searchInput);
+   }
 }
 
-// Функция для выполнения поиска
 function performSearch() {
   const searchTerm = searchInput.value.trim().toLowerCase();
 
@@ -68,7 +67,6 @@ function performSearch() {
   .filter(text => text.trim() !== '' && text.trim() !== '\n');
   console.log(mainElementTexts)
 
-  // Вызываем рекурсивную функцию поиска и подсветки совпадений
   searchAndHighlight(mainElementTexts, searchTerm);
 }
 
@@ -109,33 +107,28 @@ function clearSearchHighlight(element) {
 }
 
 
-// Добавляем обработчик события для поиска при нажатии клавиши Enter
 searchInput.addEventListener('keydown', function (event) {
-  if (event.key === 'Enter') {
-    performSearch();
-  }
+   if (event.key === 'Enter') {
+      performSearch();
+   }
 });
 
- // Добавляем обработчик события для повторного клика на иконку поиска
 searchIcon.addEventListener('click', function () {
-  // Проверяем, содержится ли инпут внутри .header__search
-  if (headerSearch.contains(searchInput)) {
-    performSearch();
-    console.log('enter')
-  }
+   if (headerSearch.contains(searchInput)) {
+      performSearch();
+      console.log('enter')
+   }
 });
 
- // Добавляем обработчик события для открытия инпута при клике на иконку поиска
 searchIcon.addEventListener('click', toggleSearchInput);
 
- // Добавляем обработчик события для закрытия инпута при клике вне него
 document.addEventListener('click', function (event) {
-  if (event.target !== searchIcon && !headerSearch.contains(event.target)) {
-    if (searchInput) {
-    // headerSearch.removeChild(searchInput);
-      clearSearchHighlight(document.body);
-    }
-  }
+   if (event.target !== searchIcon && !headerSearch.contains(event.target)) {
+      if (searchInput) {
+      // headerSearch.removeChild(searchInput);
+         clearSearchHighlight(document.body);
+      }
+   }
 });
 
 $(document).ready(function(){

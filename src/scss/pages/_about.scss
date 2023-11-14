@@ -92,9 +92,11 @@
          &_slider{
             position: relative;
             max-width: 386px;
+
             @include mob-large {
                display: none;
             }
+            
          }
    }
    
