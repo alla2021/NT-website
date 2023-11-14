@@ -1,0 +1,46 @@
+.social-logo {
+   max-width: 120px;
+
+   font-size: 20px;
+
+   &__title{
+      padding-bottom: 10px;
+      font-size: 18px;
+      font-family: $reg-lato;
+      font-weight: 300;
+   }
+
+   &__item{
+      color: #41EAD4;
+   }
+
+   &__item:hover{
+      color: $white;
+   }
+
+   &__underline{
+      padding-bottom: 10px;
+      padding-right: 10px;
+      border-bottom: 1px solid $blue-btn;
+      border-right: 1px solid $blue-btn;
+   }
+
+   &__list {
+      &_horiz {
+         display: flex;
+         justify-content: space-between;
+      }
+
+      &_vertical {
+         display: flex;
+         flex-direction: column;
+         gap: 20px;
+         position: absolute;
+         bottom: 10%;
+         right: 10%;
+         z-index: 5;
+      }
+
+
+   }
+}

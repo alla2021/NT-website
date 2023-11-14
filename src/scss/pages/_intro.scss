@@ -9,7 +9,6 @@
   position: relative;
   color: $white;
 
-
   &__wrapper {
     margin: 0 auto;
     text-align: center;
@@ -64,6 +63,53 @@
     font-family: $reg-lato;
     font-size: 18px;
   }
+
+  &__aside{
+    position: absolute;
+    bottom: 10%;
+    left: 10%;
+    z-index: 2;
+  }
+
+  &__btn-scroll {
+    border: none;
+    padding: 0;
+    margin: 0;
+    font-size: 16px; 
+    font-family: inherit; 
+    color: inherit; 
+    background: none; 
+    outline: none; 
+    writing-mode: vertical-rl;
+    text-orientation: upright; 
+    cursor: pointer;
+    position: relative;
+
+
+    &::after{ 
+      content: "";
+      background-color: $blue-btn;
+      width: 2px;
+      height: 80px;
+      top: 110px;
+      right: 8px;
+      position: absolute;
+      animation: blink 2s infinite ease-in-out; 
+    }
+
+    @keyframes blink {
+      0% {
+          opacity: 1;
+      }
+      50% {
+          opacity: 0;
+      }
+      100% {
+          opacity: 1;
+      }
+  }
+}
+
 
 
 }

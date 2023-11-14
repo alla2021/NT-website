@@ -5,9 +5,9 @@
 @import './variable';
 @import 'blocks/header';
 @import 'blocks/footer';
+@import 'components/social-logo';
 @import 'pages/intro';
 @import 'pages/about';
-
 
 .container {
   max-width: 1600px;
@@ -32,3 +32,5 @@
   background-color: $white;
   color: #02223B;
 }
+
+

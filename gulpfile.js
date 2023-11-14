@@ -46,11 +46,12 @@ function compileStyles() {
 }
 
 function transpileScript() {
-  return gulp.src('src/script/*.js')
+  return gulp.src(['src/script/*.js', '!src/script/main.js'])
     .pipe(concat('script.js'))
     .pipe(gulp.dest('src/js'))
     .pipe(browserSync.stream());
 }
+
 
 function buildStyles() {
   return gulp.src('src/css/*.css')

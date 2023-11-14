@@ -4,10 +4,13 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Night Trips - Explore exciting travel adventures with us. Choose from a variety of trips designed for the adventurer in you.">
+  <meta name="keywords" content="night trips, travel adventures, chill adventure, spooky times, desert madness, out in the wild">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="shortcut icon" href="./image/favicon.ico" />
   <title>NT.</title>
   <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
-<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css">
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css">
   <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
@@ -15,18 +18,28 @@
     <div class="container">
       <div class="header__wrapper">
         <div class="header__logo">
-          <a href="#"><img src="./image/Logo.png" alt="logo"></a>
+          <a href="#">
+            <img src="./image/Logo.png" alt="logo">
+          </a>
         </div>
         <div class="header__nav-btns">
             <div class="header__search">
-              <span class="icon-search"></span>
+              <span id="searchIcon" class="icon-search"></span>
             </div>
-            <button class="btn">MENU</button>
+            
+            <button class="btn menu-btn">MENU</button>
         </div>
+        <nav class="header__menu menu">
+          <ul class="header__list">
+            <li class="header__item"><a href="#">About</a></li>
+            <li class="header__item"><a href="#">Contacts</a></li>
+            <li class="header__item"><a href="#">About</a></li>
+            <li class="header__item"><a href="#">Contacts</a></li>
+          </ul>
+        </nav>
       </div>
     </div>
   </header>
-  
   <main>
     <section class="intro">
       <div class="container">
@@ -35,9 +48,19 @@
           <h2 class="intro__subtitle">WE GOT TRIPS FOR THE TRIPPSTER IN YOU</h2>
           <p class="intro__descriprion">Neque, eros commodo, nascetur ullamcorper vitae. Tincidunt ut venenatis, volutpat lorem ut faucibus mauris, quisque. Integer gravida sed quis congue. Vel risus, arcu a viverra leo id pulvinar ultricies. Enim in in in pulvinar nulla sollicitudin. Ullamcorper.</p>  
         </div>
+        <div class="intro__aside">
+          <button class="intro__btn-scroll">SCROLL</button>
+        </div>
+        <div class="social-logo">
+          <ul class="social-logo__list social-logo__list_vertical">
+            <li class="social-logo__item"><a href="#" target="_blank"><span class="icon-instagram"></span></a></li>
+            <li class="social-logo__item"><a href="#" target="_blank"><span class="icon-facebook"></span></a></li>
+            <li class="social-logo__item"><a href="#" target="_blank"><span class="icon-twitter"></span></a></li>
+          </ul>
+        </div>
       </div> 
     </section>
-    <section class="about">
+    <section class="about" id="here">
       <div class="about__block">
         <div class="about__wrapper">
           <h2 class="about__title">Pick your trip</h2>
@@ -45,57 +68,106 @@
           <p class="about__description">Our team put together some abouts to you to discover,
             feel free to discover each of them.</p>
         </div>
-        <div class="about__tab-block">
-          <ul class="about__list" id="list">
-              <li class="about__item tablinks active">Chill Adventure</li>
-              <li class="about__item tablinks disable">Spooky Times</li>
-              <li class="about__item tablinks disable">Desert Madness</li>
-              <li class="about__item tablinks disable">Out in the wild</li>
-          </ul>
-      </div>
-  
-      <div id="tab1" class="about__item-content tabcontent">
-          <div class="about__tab-row">
-            <div class="about__tab-col about__tab-col_slider">
-              <div class="slider">
-                <div><img src="./image/Image.png" alt="Image 1"></div>
-                <div><img src="./image/Image.png" alt="Image 2"></div>
+
+        <div class="about__tab-container">
+          <div class="about__tab-block">
+            <ul class="about__list" id="list">
+                <li class="about__item tablinks active">Chill Adventure</li>
+                <li class="about__item tablinks disable">Spooky Times</li>
+                <li class="about__item tablinks disable">Desert Madness</li>
+                <li class="about__item tablinks disable">Out in the wild</li>
+            </ul>
+          </div>
+          
+    
+          <div id="tab1" class="about__item-content tabcontent">
+              <div class="about__tab-row">
+                <div class="about__tab-col about__tab-col_slider">
+                  <div class="slider">
+                    <img src="./image/desert-1.webp" alt="Image 1"/>
+                    <img src="./image/desert-1.jpg" alt="Image 2"/>
+                  </div>
+                  <div class="arrows">
+                    <span class="icon-arrow-left2 arrow-l"></span>
+                    <span class="icon-arrow-right2 arrow-r"></span>
+                  </div>
+                </div>
+                <div class="about__tab-col">
+                  <h4 class="about__content-title">Chill Adventure</h4>
+                  <p class="about__content-text">Ornare vivamus molestie pellentesque nunc. Sed sapien erat ultrices curabitur. Erat id fringilla arcu condimentum fames.</p>
+                  <p class="about__content-text">Aliquet dictum aliquet faucibus cursus turpis. Suspendisse cum rutrum sit ut sociis. Pellentesque neque orci adipiscing pharetra lacus, dignissim pharetra ipsum blandit. Feugiat quis quam consectetur lectus id quis tortor vel, mattis.</p>
+                  <button class="about__btn btn">SEE OUR LATEST OFFER</button>
+                </div>
               </div>
-              <div class="arrows">
-                <span class="icon-arrow-left2 arrow-l"></span>
-                <span class="icon-arrow-right2 arrow-r"></span>
+          </div>
+    
+          <div id="tab2" class="about__item-content tabcontent">
+            <div class="about__tab-row">
+              <div class="about__tab-col about__tab-col_slider">
+                  <img src="./image/spooky-1.jpeg" alt="Image 2"/>
               </div>
-            </div>
-            <div class="about__tab-col">
-              <h4 class="about__content-title">Chill Adventure</h4>
-              <p class="about__content-text">Ornare vivamus molestie pellentesque nunc. Sed sapien erat ultrices curabitur. Erat id fringilla arcu condimentum fames.</p>
-              <p class="about__content-text">Aliquet dictum aliquet faucibus cursus turpis. Suspendisse cum rutrum sit ut sociis. Pellentesque neque orci adipiscing pharetra lacus, dignissim pharetra ipsum blandit. Feugiat quis quam consectetur lectus id quis tortor vel, mattis.</p>
-              <button class="about__btn btn">SEE OUR LATEST OFFER</button>
+              <div class="about__tab-col">
+                <h4 class="about__content-title">Spooky Times</h4>
+                <p class="about__content-text">Ornare vivamus molestie pellentesque nunc. Sed sapien erat ultrices curabitur. Erat id fringilla arcu condimentum fames.</p>
+                <p class="about__content-text">Aliquet dictum aliquet faucibus cursus turpis. Suspendisse cum rutrum sit ut sociis. Pellentesque neque orci adipiscing pharetra lacus, dignissim pharetra ipsum blandit. Feugiat quis quam consectetur lectus id quis tortor vel, mattis.</p>
+                <button class="about__btn btn">SEE OUR LATEST OFFER</button>
+              </div>
             </div>
           </div>
-      </div>
+    
+          <div id="tab3" class="about__item-content tabcontent">
+            <div class="about__tab-row">
+              <div class="about__tab-col about__tab-col_slider">
+                <img src="./image/desert.jpeg" alt="Image 2"/>
+              </div>
+              <div class="about__tab-col">
+                <h4 class="about__content-title">Desert Madness</h4>
+                <p class="about__content-text">Ornare vivamus molestie pellentesque nunc. Sed sapien erat ultrices curabitur. Erat id fringilla arcu condimentum fames.</p>
+                <p class="about__content-text">Aliquet dictum aliquet faucibus cursus turpis. Suspendisse cum rutrum sit ut sociis. Pellentesque neque orci adipiscing pharetra lacus, dignissim pharetra ipsum blandit. Feugiat quis quam consectetur lectus id quis tortor vel, mattis.</p>
+                <button class="about__btn btn">SEE OUR LATEST OFFER</button>
+              </div>
+            </div>
+          </div>
   
-      <div id="tab2" class="about__item-content tabcontent">
-          <h3>Title 2</h3>
-          <p>Description</p>
-      </div>
-  
-      <div id="tab3" class="about__item-content tabcontent">
-          <h3>Title 3</h3>
-          <p>Description</p>
-      </div>
+          <div id="tab4" class="about__item-content tabcontent">
+            <div class="about__tab-row">
+              <div class="about__tab-col about__tab-col_slider">
+                <img src="./image/wild-2.jpeg" alt="Image 2">
+              </div>
+              <div class="about__tab-col">
+                <h4 class="about__content-title">Out in the wild</h4>
+                <p class="about__content-text">Ornare vivamus molestie pellentesque nunc. Sed sapien erat ultrices curabitur. Erat id fringilla arcu condimentum fames.</p>
+                <p class="about__content-text">Aliquet dictum aliquet faucibus cursus turpis. Suspendisse cum rutrum sit ut sociis. Pellentesque neque orci adipiscing pharetra lacus, dignissim pharetra ipsum blandit. Feugiat quis quam consectetur lectus id quis tortor vel, mattis.</p>
+                <button class="about__btn btn">SEE OUR LATEST OFFER</button>
+              </div>
+            </div>
+          </div>
+          <div class="social-logo about__social-links">
+            <h6 class="social-logo__title">SHARE IT:</h6>
+            <ul class="social-logo__list social-logo__list_horiz social-logo__underline">
+              <li class="social-logo__item"><a href="#" target="_blank"><span class="icon-instagram"></span></a></li>
+              <li class="social-logo__item"><a href="#" target="_blank"><span class="icon-facebook"></span></a></li>
+              <li class="social-logo__item"><a href="#" target="_blank"><span class="icon-twitter"></span></a></li>
+            </ul>
+          </div>
 
-      <div id="tab4" class="about__item-content tabcontent">
-          <h3>Title 4</h3>
-          <p>Description</p>
-    </div>
- 
 
+          <div class="about-us">
+            <div class="about-us__row">
+              <div class="about-us__col"></div>
+              <div class="about-us__col"></div>
+            </div>
+          </div>
+
+
+
+
+        </div>
     </section>  
   </main>
 
   <footer>
-    <section class="footer" >
+    <section class="footer">
       <div class="container">
         <div class="footer__row">
           <div class="footer__column">
@@ -134,11 +206,13 @@
           </div>
           <div class="footer__column">
             <h4 class="footer__title">Follow us</h4>
-            <ul class="footer__list footer__list_icons">
-              <li class="footer__item"><a href="#"><span class="icon-instagram"></span></a></li>
-              <li class="footer__item"><a href="#"><span class="icon-facebook"></span></a></li>
-              <li class="footer__item"><a href="#"><span class="icon-twitter"></span></a></li>
-            </ul>
+            <div class="social-logo">
+              <ul class="social-logo__list social-logo__list_horiz">
+                <li class="social-logo__item"><a href="#" target="_blank"><span class="icon-instagram"></span></a></li>
+                <li class="social-logo__item"><a href="#" target="_blank"><span class="icon-facebook"></span></a></li>
+                <li class="social-logo__item"><a href="#" target="_blank"><span class="icon-twitter"></span></a></li>
+              </ul>
+            </div>
           </div>
         </div>
         <div class="footer__copyright">Copyright © Night Trips 2019. All rights reserved.</div>
@@ -149,6 +223,6 @@
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
 
-  <script src="js/script.js"></script>
+  <script type="module" src="js/script.js"></script>
 </body>
 </html>

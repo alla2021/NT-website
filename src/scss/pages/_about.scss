@@ -1,5 +1,4 @@
 .about {
-   //background-image: url(../image/bg.png);
    background-image: url(../image/bg-1.png);
    background-color: #02223B;
    min-height: 100vh;
@@ -103,14 +102,56 @@
 
    &__btn {
       margin: 40px 0;
+      position: relative;
+
+      &::after {
+         content: '';
+         position: absolute;
+         right: -20%;
+         bottom: 50%;
+         height: 2px;
+         width: 80px; 
+         z-index: 10;
+         background-color: #ffffff;
+      }
+
+      &:hover::after {
+         background-color: $blue-btn; 
+      }
    }
+
+   &__tab-container{
+      position: relative;
+   }
+
+   
+   &__social-links{
+      position: absolute;
+      bottom: 10%;
+      right: -5%;
+      z-index: 7;
+      width: 120px;
+      max-width: 100%;
+   }
+   
+   img {
+      max-width: 486px;
+      border-radius: 20px;
+      max-height: 607px;
+      height: 100%;
+      width: 100%;
+
+   }
+
 }
 .slider{
    img {
-      max-width: 386px;
+      max-width: 486px;
+      max-height: 607px;
+      height: 100%;
+      border-radius: 20px;
    }
 }
-
 
 .arrows {
    position: absolute;
