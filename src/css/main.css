@@ -429,14 +429,8 @@ input {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  padding: 30px 0;
-}
-.about__block {
-  max-width: 1200px;
-  width: 100%;
-  margin: 0 auto;
-  color: white;
   padding: 30px 10px;
+  color: white;
 }
 .about__wrapper {
   display: flex;
@@ -449,6 +443,16 @@ input {
   font-size: 40px;
   font-family: "Oswald regular";
 }
+@media screen and (max-width: 1024px) {
+  .about__title {
+    font-size: 32px;
+  }
+}
+@media screen and (max-width: 425px) {
+  .about__title {
+    font-size: 26px;
+  }
+}
 .about__icon-cross {
   width: 16px;
   height: 16px;
@@ -460,11 +464,26 @@ input {
   font-size: 18px;
   font-family: "Lato regular";
 }
-.about__list {
+@media screen and (max-width: 1024px) {
+  .about__description {
+    font-size: 16px;
+  }
+}
+.about__tab-container {
+  margin: 0 auto;
   max-width: 1200px;
+  width: 100%;
+}
+@media screen and (max-width: 1024px) {
+  .about__tab-container {
+    width: 90%;
+  }
+}
+.about__list {
   padding-top: 30px;
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
   align-items: center;
   text-transform: uppercase;
   font-size: 20px;
@@ -619,6 +638,11 @@ input {
 .about-us__col {
   width: 50%;
 }
+@media screen and (max-width: 640px) {
+  .about-us__col {
+    width: 90%;
+  }
+}
 .about-us__col_first {
   max-width: 320px;
 }
@@ -648,6 +672,18 @@ input {
 .about-us__title {
   font-size: 40px;
   font-family: "Oswald regular";
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+@media screen and (max-width: 1024px) {
+  .about-us__title {
+    font-size: 32px;
+  }
+}
+@media screen and (max-width: 425px) {
+  .about-us__title {
+    font-size: 26px;
+  }
 }
 .about-us__description {
   width: 350px;

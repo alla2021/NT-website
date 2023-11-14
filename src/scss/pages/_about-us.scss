@@ -6,7 +6,7 @@
    padding: 30px 0;
    color: $white;
 
-   &__row{
+   &__row {
       display: flex;
       align-items: center;
       justify-content: center;
@@ -21,6 +21,10 @@
    
    &__col {
       width: 50%;
+
+      @include mob-large {
+         width: 90%;
+      }
 
       &_first{
          max-width: 320px;
@@ -48,7 +52,18 @@
    &__title {
       font-size: 40px;
       font-family: $reg-oswald;
+      margin-bottom: 20px;
+      text-transform: uppercase;
+
+      @include tab {
+         font-size: 32px;
+      }
+
+      @include mob-mid {
+         font-size: 26px;
+      }
    }
+
 
    &__description{
       width: 350px;
@@ -61,7 +76,6 @@
       font-size: 18px;
       font-family: $light-lato;
    }
-
 
    &__btn {
       margin: 40px 0;
