@@ -51,6 +51,10 @@
       font-size: 20px;
       font-family: $reg-oswald;
       border-bottom: 1px solid $blue-btn;
+
+      @include mob-large {
+         font-size: 16px;
+      }
    }
 
    &__item {
@@ -81,9 +85,16 @@
    &__tab-col {
       width: 50%;
 
+      @include mob-large {
+         width: 100%;
+      }
+
          &_slider{
             position: relative;
             max-width: 386px;
+            @include mob-large {
+               display: none;
+            }
          }
    }
    
@@ -123,7 +134,6 @@
    &__tab-container{
       position: relative;
    }
-
    
    &__social-links{
       position: absolute;
@@ -132,6 +142,10 @@
       z-index: 7;
       width: 120px;
       max-width: 100%;
+
+      @include tab {
+         display: none;
+      }
    }
    
    img {
@@ -142,7 +156,6 @@
       width: 100%;
 
    }
-
 }
 .slider{
    img {

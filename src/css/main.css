@@ -217,6 +217,11 @@ input {
   display: flex;
   align-items: center;
 }
+@media screen and (max-width: 640px) {
+  .header__search {
+    display: none;
+  }
+}
 
 .footer {
   min-height: 600px;
@@ -438,6 +443,11 @@ input {
   font-family: "Oswald regular";
   border-bottom: 1px solid #00C9E0;
 }
+@media screen and (max-width: 640px) {
+  .about__list {
+    font-size: 16px;
+  }
+}
 .about__item {
   padding: 20px 0;
 }
@@ -461,9 +471,19 @@ input {
 .about__tab-col {
   width: 50%;
 }
+@media screen and (max-width: 640px) {
+  .about__tab-col {
+    width: 100%;
+  }
+}
 .about__tab-col_slider {
   position: relative;
   max-width: 386px;
+}
+@media screen and (max-width: 640px) {
+  .about__tab-col_slider {
+    display: none;
+  }
 }
 .about__content-title {
   font-size: 28px;
@@ -503,6 +523,11 @@ input {
   z-index: 7;
   width: 120px;
   max-width: 100%;
+}
+@media screen and (max-width: 1024px) {
+  .about__social-links {
+    display: none;
+  }
 }
 .about img {
   max-width: 486px;

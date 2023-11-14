@@ -60,6 +60,10 @@
     padding: 0 32px;
     display: flex;
     align-items: center;
+
+    @include mob-large {
+      display: none;
+    }
   }
 }
 
