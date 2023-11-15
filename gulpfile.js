@@ -57,32 +57,32 @@ function buildStyles() {
   return gulp.src('src/css/*.css')
     .pipe(autoprefixer())
     .pipe(cleanCSS())
-    .pipe(gulp.dest('doc/css'))
+    .pipe(gulp.dest('docs/css'))
 }
 
 function buildScript() {
   return gulp.src('src/js/*.js')
     .pipe(uglify())
-    .pipe(gulp.dest('doc/js'))
+    .pipe(gulp.dest('docs/js'))
 }
 
 function buildHtml() {
   return gulp.src('src/*.html')
-    .pipe(gulp.dest('doc'))
+    .pipe(gulp.dest('docs'))
 }
 
 function copiImages () {
   return gulp.src('src/images/**/*')
-    .pipe(gulp.dest('doc'));
+    .pipe(gulp.dest('docs'));
 };
 
 function cleanUp() {
-  return del('doc')
+  return del('docs')
 }
 
 function archive() {
-  return gulp.src('doc/**/**')
-    .pipe(zip('doc.zip'))
+  return gulp.src('docs/**/**')
+    .pipe(zip('build.zip'))
     .pipe(gulp.dest('./'))
 }
 
