@@ -18,6 +18,7 @@ function liveReload() {
 
   gulp.watch('src/scss/**/*.scss', compileStyles); 
   gulp.watch('src/script/**/*.js', transpileScript)
+  gulp.watch('src/images/**/*', copyImages);  
   gulp.watch('src/*.html').on('change', browserSync.reload)
 }
 
@@ -72,8 +73,8 @@ function buildHtml() {
 }
 
 function copyImages() {
-  return gulp.src('src/images/**/*')
-    .pipe(gulp.dest('docs/images'));
+  return gulp.src('src/image/**/*')
+    .pipe(gulp.dest('docs/image'));
 }
 
 
