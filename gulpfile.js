@@ -71,10 +71,11 @@ function buildHtml() {
     .pipe(gulp.dest('docs'))
 }
 
-function copiImages () {
+function copyImages() {
   return gulp.src('src/images/**/*')
-    .pipe(gulp.dest('docs'));
-};
+    .pipe(gulp.dest('docs/images'));
+}
+
 
 function cleanUp() {
   return del('docs')
@@ -89,4 +90,4 @@ function archive() {
 exports.default = liveReload;
 exports.scss = compileStyles;
 exports.sassLinter= sassLinter;
-exports.build = gulp.series(cleanUp, gulp.parallel(buildStyles, buildScript, buildHtml, copiImages), archive);
+exports.build = gulp.series(cleanUp, gulp.parallel(buildStyles, buildScript, buildHtml, copyImages), archive);
