@@ -53,6 +53,10 @@ function transpileScript() {
     .pipe(browserSync.stream());
 }
 
+function copyFonts() {
+  return gulp.src('src/fonts/**/*')
+    .pipe(gulp.dest('docs/fonts'));
+}
 
 function buildStyles() {
   return gulp.src('src/css/*.css')
@@ -91,4 +95,4 @@ function archive() {
 exports.default = liveReload;
 exports.scss = compileStyles;
 exports.sassLinter= sassLinter;
-exports.build = gulp.series(cleanUp, gulp.parallel(buildStyles, buildScript, buildHtml, copyImages), archive);
+exports.build = gulp.series(cleanUp, gulp.parallel(buildStyles, buildScript, buildHtml, copyImages, copyFonts), archive);
